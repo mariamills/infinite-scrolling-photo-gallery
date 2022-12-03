@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Staatliches", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5.5rem;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.loader {
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.loader img {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 1rem;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.img-container img:hover {
+  transform: scale(1.02);
+}
+
+/* Modal  */
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: lightgray;
+  display: none;
+  font-size: 3rem;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.close-modal {
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 5.5rem;
+  position: absolute;
+  right: 5%;
+  top: 0;
+  transition: color 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #333;
+}
+
+.modal img {
+  border-radius: 5px;
+  border: 5px solid lightgray;
+  left: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+}
+
+.modal-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  text-align: center;
+  top: 75%;
+  right: 2%;
+}
+
+.modal-details a {
+  color: lightgray;
+  transition: color 0.2s ease-in-out;
+}
+
+.modal-details a:hover,
+.modal-details a:focus {
+  color: #333;
+}
+
+.fa-heart {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.fa-heart:hover,
+.fa-heart:focus {
+  color: rgb(255, 128, 128);
+}
+
+.modal-downloads,
+.modal-views {
+  padding-left: 0.5rem;
+}
+
+/* Media Queries  */
+@media screen and (max-width: 768px) {
+  .modal img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .img-container {
+    margin: 10px;
+  }
+
+  .modal-details {
+    font-size: 2.5rem;
+    top: 65%;
+  }
+}
