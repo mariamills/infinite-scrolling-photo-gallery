@@ -8,7 +8,7 @@ const loader = document.getElementById("loader");
 const imgContainer = document.getElementById("img-container");
 
 //Unsplash API
-const apiKey = "yourApiKey";
+const apiKey = "process.env.UNSPLASH_API_KEY";
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${initialCount}`;
 
 //Modal
